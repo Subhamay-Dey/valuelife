@@ -100,7 +100,6 @@ const AdminLogin: React.FC = () => {
         
         <div className="mt-4 text-center">
           <p className="text-sm text-neutral-500">
-            Default credentials: admin / admin123
           </p>
         </div>
       </div>
