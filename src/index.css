@@ -583,3 +583,23 @@ body.razorpay-checkout-frame {
 .team-member-hover:hover .team-member-content {
   background: linear-gradient(to right, #f0f9ff, #ffffff);
 }
+
+/* Mobile responsive styles */
+@media (max-width: 640px) {
+  .landing-nav {
+    padding: 0.5rem 1rem;
+  }
+  
+  .landing-logo {
+    font-size: 1.2rem;
+  }
+  
+  .landing-nav-links {
+    gap: 0.5rem;
+  }
+  
+  .landing-nav-link {
+    padding: 0.375rem 1rem;
+    font-size: 0.875rem;
+  }
+}

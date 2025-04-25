@@ -121,19 +121,26 @@ const LandingPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
       {/* Header with Logo and Navigation */}
-      <header className="fixed w-full bg-white/90 backdrop-blur-sm shadow-md z-50">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <div className="flex items-center">
-            <img src="/images/logo.jpg" alt="Value Life Logo" className="h-16 object-contain" />
-            <h1 className="ml-4 text-2xl font-bold text-blue-600">Value Life</h1>
-          </div>
-          <nav className="space-x-6">
-            <Link to="/login" className="px-6 py-2 text-gray-600 hover:text-blue-600 transition-colors">Login</Link>
-            <Link to="/register" className="px-6 py-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-full hover:from-blue-700 hover:to-blue-800 transition-all transform hover:scale-105">
-              Join Now
-            </Link>
-          </nav>
+      <header className="landing-nav flex items-center justify-between px-4 py-2 bg-white shadow-sm">
+        <div className="flex items-center">
+          <img src="/images/logo.jpg" alt="Logo" className="h-10 w-10 object-contain" />
+          <h1 className="landing-logo ml-2 font-semibold">Value Life</h1>
         </div>
+        
+        <nav className="landing-nav-links flex items-center gap-3">
+          <Link
+            to="/login"
+            className="landing-nav-link px-4 py-1.5 text-gray-600 hover:text-gray-800 hover:border hover:border-gray-200 rounded-full transition-all"
+          >
+            Login
+          </Link>
+          <Link
+            to="/register"
+            className="landing-nav-link px-4 py-1.5 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition-all"
+          >
+            Join
+          </Link>
+        </nav>
       </header>
 
       {/* Hero Section */}
