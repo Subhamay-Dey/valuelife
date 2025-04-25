@@ -97,11 +97,6 @@ const AdminLogin: React.FC = () => {
             </div>
           </form>
         </Card>
-        
-        <div className="mt-4 text-center">
-          <p className="text-sm text-neutral-500">
-          </p>
-        </div>
       </div>
     </div>
   );
