@@ -98,7 +98,7 @@ const AdminLogin: React.FC = () => {
           </form>
         </Card>
       </div>
-    </div>
+     </div>
   );
 };
 
