@@ -251,12 +251,12 @@ const Register: React.FC = () => {
             <div className="max-w-xl" data-aos="fade-up" data-aos-delay="200">
               <h2 className="text-4xl font-bold leading-tight mb-6">
                 Join Our Growing Community of Success
-              </h2>
+        </h2>
               <p className="text-xl text-blue-100 leading-relaxed">
                 Discover a world of opportunities where health meets wealth. Start your journey with Value Life today.
-              </p>
-            </div>
-
+        </p>
+      </div>
+      
             <div className="grid grid-cols-2 gap-6 mt-12">
               {benefits.map((benefit, index) => (
                 <div 
@@ -267,7 +267,7 @@ const Register: React.FC = () => {
                 >
                   <div className="bg-white/20 rounded-full w-12 h-12 flex items-center justify-center mb-4">
                     {benefit.icon}
-                  </div>
+                </div>
                   <h3 className="text-lg font-semibold mb-2">{benefit.title}</h3>
                   <p className="text-blue-100 text-sm">{benefit.description}</p>
                 </div>
@@ -291,9 +291,9 @@ const Register: React.FC = () => {
                   <div className="text-blue-200">Active Partners</div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
+                      </div>
+                    </div>
+                  </div>
         
         {/* Background Decorative Elements */}
         <div className="absolute inset-0 z-0">
@@ -308,7 +308,7 @@ const Register: React.FC = () => {
           <div className="lg:hidden flex items-center justify-center space-x-4 mb-8">
             <img src="/images/logo.jpg" alt="Value Life Logo" className="h-12 w-12 object-contain" />
             <h1 className="text-2xl font-bold text-gray-900">Value Life</h1>
-          </div>
+                </div>
 
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-gray-900 mb-2">
@@ -317,7 +317,7 @@ const Register: React.FC = () => {
             <p className="text-gray-600">
               Join Value Life and start your journey to success
             </p>
-          </div>
+                    </div>
 
           <div className="bg-white shadow-xl rounded-2xl p-8 border border-gray-100">
             {errors.form && (
@@ -326,119 +326,119 @@ const Register: React.FC = () => {
                   <div className="flex-shrink-0">
                     <svg className="h-5 w-5 text-red-400" viewBox="0 0 20 20" fill="currentColor">
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
-                    </svg>
+                        </svg>
                   </div>
                   <div className="ml-3">
                     <p className="text-sm text-red-700">{errors.form}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            )}
-
+              )}
+            
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div data-aos="fade-up" data-aos-delay="200">
-                  <Input
-                    id="name"
-                    name="name"
-                    type="text"
-                    label="Full Name"
-                    value={formData.name}
-                    onChange={handleChange}
+            <Input
+              id="name"
+              name="name"
+              type="text"
+              label="Full Name"
+              value={formData.name}
+              onChange={handleChange}
                     error={errors.name}
-                    placeholder="Enter your full name"
-                    leftIcon={<User className="h-5 w-5" />}
-                    required
-                  />
+              placeholder="Enter your full name"
+              leftIcon={<User className="h-5 w-5" />}
+              required
+            />
                 </div>
-
+            
                 <div data-aos="fade-up" data-aos-delay="300">
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
+            <Input
+              id="email"
+              name="email"
+              type="email"
                     label="Email Address"
-                    value={formData.email}
-                    onChange={handleChange}
+              value={formData.email}
+              onChange={handleChange}
                     error={errors.email}
-                    placeholder="Enter your email"
-                    leftIcon={<Mail className="h-5 w-5" />}
-                    required
-                  />
+              placeholder="Enter your email"
+              leftIcon={<Mail className="h-5 w-5" />}
+              required
+            />
                 </div>
-
+            
                 <div data-aos="fade-up" data-aos-delay="400">
-                  <Input
-                    id="phone"
-                    name="phone"
-                    type="tel"
-                    label="Phone Number"
-                    value={formData.phone}
-                    onChange={handleChange}
+            <Input
+              id="phone"
+              name="phone"
+              type="tel"
+              label="Phone Number"
+              value={formData.phone}
+              onChange={handleChange}
                     error={errors.phone}
-                    placeholder="Enter your phone number"
-                    leftIcon={<Phone className="h-5 w-5" />}
-                    required
-                  />
+              placeholder="Enter your phone number"
+              leftIcon={<Phone className="h-5 w-5" />}
+              required
+            />
                 </div>
-
+            
                 <div data-aos="fade-up" data-aos-delay="500">
-                  <Input
-                    id="address"
-                    name="address"
-                    type="text"
-                    label="Address"
-                    value={formData.address}
-                    onChange={handleChange}
+            <Input
+              id="address"
+              name="address"
+              type="text"
+              label="Address"
+              value={formData.address}
+              onChange={handleChange}
                     error={errors.address}
-                    placeholder="Enter your address"
-                    leftIcon={<MapPin className="h-5 w-5" />}
-                    required
-                  />
+              placeholder="Enter your address"
+              leftIcon={<MapPin className="h-5 w-5" />}
+              required
+            />
                 </div>
 
                 <div data-aos="fade-up" data-aos-delay="600">
                   <div className="relative">
                     <Input
-                      id="password"
-                      name="password"
-                      type={showPassword ? 'text' : 'password'}
+                  id="password"
+                  name="password"
+                  type={showPassword ? 'text' : 'password'}
                       label="Password"
-                      value={formData.password}
-                      onChange={handleChange}
+                  value={formData.password}
+                  onChange={handleChange}
                       error={errors.password}
                       placeholder="Create a password"
                       leftIcon={<Lock className="h-5 w-5" />}
-                      required
-                    />
-                    <button
-                      type="button"
-                      onClick={() => setShowPassword(!showPassword)}
+                  required
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
                       className="absolute right-2 top-[34px] p-2 text-gray-400 hover:text-gray-600 focus:outline-none"
-                    >
-                      {showPassword ? (
+                >
+                  {showPassword ? (
                         <EyeOff className="h-5 w-5" />
-                      ) : (
+                  ) : (
                         <Eye className="h-5 w-5" />
-                      )}
-                    </button>
-                  </div>
-                </div>
-
+                  )}
+                </button>
+              </div>
+            </div>
+            
                 <div data-aos="fade-up" data-aos-delay="700">
                   <div className="relative">
-                    <Input
-                      id="confirmPassword"
-                      name="confirmPassword"
+            <Input
+              id="confirmPassword"
+              name="confirmPassword"
                       type={showConfirmPassword ? 'text' : 'password'}
-                      label="Confirm Password"
-                      value={formData.confirmPassword}
-                      onChange={handleChange}
+              label="Confirm Password"
+              value={formData.confirmPassword}
+              onChange={handleChange}
                       error={errors.confirmPassword}
-                      placeholder="Confirm your password"
-                      leftIcon={<Lock className="h-5 w-5" />}
-                      required
-                    />
+              placeholder="Confirm your password"
+              leftIcon={<Lock className="h-5 w-5" />}
+              required
+            />
                     <button
                       type="button"
                       onClick={() => setShowConfirmPassword(!showConfirmPassword)}
@@ -500,24 +500,24 @@ const Register: React.FC = () => {
               </div>
 
               <div data-aos="fade-up" data-aos-delay="900">
-                <Button
-                  type="submit"
+              <Button
+                type="submit"
                   variant="primary"
-                  fullWidth
-                  isLoading={isLoading}
+                fullWidth
+                isLoading={isLoading}
                   className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 transform hover:scale-[1.02] transition-all duration-200"
-                >
-                  Create Account
-                </Button>
-              </div>
-            </form>
-
+              >
+                Create Account
+              </Button>
+            </div>
+          </form>
+          
             <div className="mt-8 text-center" data-aos="fade-up" data-aos-delay="1000">
               <p className="text-sm text-gray-600">
                 Already have an account?{' '}
                 <Link to="/login" className="font-medium text-blue-600 hover:text-blue-500">
                   Sign in
-                </Link>
+              </Link>
               </p>
             </div>
           </div>

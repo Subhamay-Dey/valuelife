@@ -140,7 +140,7 @@ const LandingPage: React.FC = () => {
           >
             Join
           </Link>
-        </nav>
+      </nav>
       </header>
 
       {/* Hero Section */}
@@ -149,19 +149,19 @@ const LandingPage: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center text-white">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
               Transform Your Health & Create Wealth
-            </h1>
+          </h1>
             <p className="text-xl md:text-2xl mb-12 text-blue-100">
               "Value Life means every person should have good values, and those values should reflect in our life."
-            </p>
+          </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link to="/register" className="px-8 py-4 bg-white text-blue-600 rounded-full font-semibold hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg">
                 Start Your Journey
-              </Link>
+            </Link>
               <Link to="/products" className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-full font-semibold hover:bg-white/10 transition-all">
                 Explore Products
-              </Link>
-            </div>
+            </Link>
           </div>
+        </div>
         </div>
       </section>
 
@@ -355,8 +355,8 @@ const LandingPage: React.FC = () => {
                   <h3 className="text-xl font-bold text-gray-800 group-hover:text-blue-600 transition-colors duration-300">{member.name}</h3>
                   <p className="text-blue-600 mt-1 transform group-hover:translate-x-2 transition-transform duration-300">{member.position}</p>
                   <div className="h-1 w-10 bg-blue-600 mt-4 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
-                </div>
-              </div>
+          </div>
+          </div>
             ))}
           </div>
         </div>
@@ -393,7 +393,7 @@ const LandingPage: React.FC = () => {
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-gray-800 group-hover:text-blue-600 transition-colors">{product.name}</h3>
                 </div>
-              </div>
+          </div>
             ))}
           </div>
         </div>
@@ -404,7 +404,7 @@ const LandingPage: React.FC = () => {
         <div className="container mx-auto px-4 text-center" data-aos="fade-up">
           <h2 className="text-4xl font-bold mb-8">Ready to Transform Your Life?</h2>
           <p className="text-xl mb-12 max-w-2xl mx-auto">
-            Join thousands who are already improving their health and creating wealth with Value Life.
+          Join thousands who are already improving their health and creating wealth with Value Life.
             Start your journey today with zero registration fees and lifetime validity!
           </p>
           <Link to="/register" className="inline-block px-8 py-4 bg-white text-blue-600 rounded-full font-semibold hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg">

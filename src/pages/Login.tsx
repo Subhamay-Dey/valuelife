@@ -167,54 +167,54 @@ const Login: React.FC = () => {
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-gray-900 mb-2">
               Welcome Back
-            </h2>
+        </h2>
             <p className="text-gray-600">
               Sign in to continue your journey towards a better life
-            </p>
-          </div>
-
+        </p>
+      </div>
+      
           <div className="bg-white shadow-xl rounded-2xl p-8 border border-gray-100">
-            {error && (
+          {error && (
               <div className="mb-6 bg-red-50 border-l-4 border-red-400 p-4 rounded-md animate-shake" data-aos="fade-in">
-                <div className="flex">
-                  <div className="flex-shrink-0">
+              <div className="flex">
+                <div className="flex-shrink-0">
                     <svg className="h-5 w-5 text-red-400" viewBox="0 0 20 20" fill="currentColor">
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <div className="ml-3">
+                  </svg>
+                </div>
+                <div className="ml-3">
                     <p className="text-sm text-red-700">{error}</p>
-                  </div>
                 </div>
               </div>
-            )}
-
-            <form className="space-y-6" onSubmit={handleSubmit}>
+            </div>
+          )}
+          
+          <form className="space-y-6" onSubmit={handleSubmit}>
               <div data-aos="fade-up" data-aos-delay="200">
-                <Input
-                  id="email"
-                  type="email"
-                  label="Email address"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Enter your email"
-                  leftIcon={<Mail className="h-5 w-5" />}
-                  required
-                />
+            <Input
+              id="email"
+              type="email"
+              label="Email address"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Enter your email"
+              leftIcon={<Mail className="h-5 w-5" />}
+              required
+            />
               </div>
 
               <div data-aos="fade-up" data-aos-delay="400">
                 <div className="relative">
                   <Input
-                    id="password"
-                    type={showPassword ? 'text' : 'password'}
+                  id="password"
+                  type={showPassword ? 'text' : 'password'}
                     label="Password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                     placeholder="Enter your password"
                     leftIcon={<Lock className="h-5 w-5" />}
-                    required
-                  />
+                  required
+                />
                   <button
                     type="button"
                     onClick={() => setShowPassword(!showPassword)}
@@ -226,42 +226,42 @@ const Login: React.FC = () => {
                       <Eye className="h-5 w-5" />
                     )}
                   </button>
-                </div>
               </div>
-
+            </div>
+            
               <div className="flex items-center justify-between" data-aos="fade-up" data-aos-delay="600">
-                <div className="flex items-center">
-                  <input
-                    id="remember-me"
-                    name="remember-me"
-                    type="checkbox"
+              <div className="flex items-center">
+                <input
+                  id="remember-me"
+                  name="remember-me"
+                  type="checkbox"
                     className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded cursor-pointer"
-                  />
+                />
                   <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-700 cursor-pointer">
-                    Remember me
-                  </label>
-                </div>
-
-                <div className="text-sm">
+                  Remember me
+                </label>
+              </div>
+              
+              <div className="text-sm">
                   <Link to="/forgot-password" className="font-medium text-blue-600 hover:text-blue-500 transition-colors">
                     Forgot password?
-                  </Link>
-                </div>
+                </Link>
               </div>
-
+            </div>
+            
               <div data-aos="fade-up" data-aos-delay="800">
-                <Button
-                  type="submit"
-                  variant="primary"
-                  fullWidth
-                  isLoading={isLoading}
+              <Button
+                type="submit"
+                variant="primary"
+                fullWidth
+                isLoading={isLoading}
                   className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 transform hover:scale-[1.02] transition-all duration-200"
-                >
-                  Sign in
-                </Button>
-              </div>
+              >
+                Sign in
+              </Button>
+            </div>
             </form>
-
+            
             <div className="mt-8" data-aos="fade-up" data-aos-delay="1000">
               <div className="relative">
                 <div className="absolute inset-0 flex items-center">
@@ -273,7 +273,7 @@ const Login: React.FC = () => {
                   </span>
                 </div>
               </div>
-
+              
               <div className="mt-6">
                 <Link to="/register">
                   <Button
