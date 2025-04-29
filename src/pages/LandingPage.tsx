@@ -144,7 +144,7 @@ const LandingPage: React.FC = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-r from-blue-600 to-blue-800">
+      <section className="pt-32 pb-20 bg-gradient-to-r from-vibrantBlue to-customOrange">  {/*from-blue-600 to-blue-800*/}
         <div className="container mx-auto px-4" data-aos="fade-up">
           <div className="max-w-4xl mx-auto text-center text-white">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">

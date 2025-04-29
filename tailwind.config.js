@@ -87,7 +87,10 @@ export default {
           700: '#555555',
           800: '#333333',
           900: '#1a1a1a',
-        }
+        },
+           // Adding custom colors
+           vibrantBlue: 'rgb(11, 125, 175)', // Vibrant blue
+           customOrange: 'rgb(255, 165, 0)', // Orange
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
