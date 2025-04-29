@@ -194,7 +194,7 @@ const Login: React.FC = () => {
             <Input
               id="email"
               type="email"
-              label="Email address"
+              label="Distributor ID"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email"
