@@ -9,12 +9,12 @@ interface TeamMember {
 const LandingPage: React.FC = () => {
   const teamMembers: TeamMember[] = [
     {
-      image: '/images/2.jpg',
+      image: '/images/1.jpg',
       name: 'JAMRODDIN SHEK',
       position: 'Founder and MD'
     },
     {
-      image: '/images/1.jpg',
+      image: '/images/2.jpg',
       name: 'Srinivas',
       position: 'CEO'
     },
