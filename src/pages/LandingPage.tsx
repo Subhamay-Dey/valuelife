@@ -107,11 +107,11 @@ const LandingPage: React.FC = () => {
   ];
 
   const products = [
-    { image: '/images/img1.jpg', name: 'PH Alkaline Water Filter', description: 'Advanced water purification system for healthier living' },
-    { image: '/images/img2.jpg', name: 'Bio Magnetic Mattress', description: 'Revolutionary sleep technology for better health' },
-    { image: '/images/img3.jpg', name: 'Health Supplements', description: 'Premium quality supplements for overall wellness' },
-    { image: '/images/img4.jpg', name: 'Wellness Products', description: 'Innovative solutions for a healthier lifestyle' },
-    { image: '/images/img5.jpg', name: 'Natural Care', description: 'Organic and natural personal care products' },
+    { image: '/images/IMG_1.jpg', name: 'PH Alkaline Water Filter', description: 'Advanced water purification system for healthier living' },
+    { image: '/images/IMG_2.jpg', name: 'Bio Magnetic Mattress', description: 'Revolutionary sleep technology for better health' },
+    { image: '/images/IMG_3.jpg', name: 'Health Supplements', description: 'Premium quality supplements for overall wellness' },
+    { image: '/images/IMG_4.jpg', name: 'Wellness Products', description: 'Innovative solutions for a healthier lifestyle' },
+    { image: '/images/IMG_5.jpg', name: 'Natural Care', description: 'Organic and natural personal care products' },
     { image: '/images/IMG-20250425-WA0043.jpg', name: 'Lifestyle Products', description: 'Enhanced living through innovative products' },
     { image: '/images/IMG-20250425-WA0044.jpg', name: 'Home Essentials', description: 'Quality products for your daily needs' },
     { image: '/images/IMG-20250425-WA0045.jpg', name: 'Premium Collection', description: 'Exclusive range of premium products' },
