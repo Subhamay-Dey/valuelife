@@ -20,6 +20,8 @@ import Referrals from './pages/Referrals';
 import Settings from './pages/Settings';
 import Support from './pages/Support';
 import ProtectedRoute from './components/auth/ProtectedRoute';
+import About from './pages/About';
+import BusinessPlan from './pages/BusinessPlan';
 
 function App() {
   return (
@@ -41,6 +43,8 @@ function App() {
         <Route path="/referrals" element={<ProtectedRoute element={<Referrals />} requiresKyc={true} />} />
         <Route path="/settings" element={<ProtectedRoute element={<Settings />} />} />
         <Route path="/support" element={<ProtectedRoute element={<Support />} />} />
+        <Route path="/about" element={<ProtectedRoute element={<About />} />} />
+        <Route path="/business" element={<ProtectedRoute element={<BusinessPlan />} />} />
         
         {/* Admin Routes */}
         <Route path="/admin" element={<Navigate to="/admin/login" replace />} />
