@@ -344,7 +344,19 @@ const KycUploader: React.FC<KycUploaderProps> = ({
             Upload Document
           </Button>
         </div>
+        
+        
       )}
+      <div className="mb-4">
+  <label className="block mb-1 font-medium text-sm text-neutral-700">
+    Or Enter manually:
+  </label>
+  <input
+    type="text"
+    placeholder="Enter document number or details"
+    className="block w-full rounded border border-neutral-300 px-4 py-2 text-sm text-neutral-800 focus:outline-none focus:ring-2 focus:ring-primary-500"
+  />
+</div>
       
       {/* For documents already uploaded and pending/approved */}
       {status && status !== 'rejected' && existingDocument && (
