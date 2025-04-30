@@ -83,13 +83,13 @@ const LandingPage: React.FC = () => {
     {
       image: '/images/1.jpg',
       name: 'JAMRODDIN SHEK',
-      position: 'Founder and MD',
+      position: 'Founder and Marketing Director',
       description: 'A dedicated professional with 9 years of experience in network marketing, specializing in team building and sales growth with 12 years of expertise in the RO industry.'
     },
     {
       image: '/images/2.jpg',
-      name: 'Srinivas',
-      position: 'CEO',
+      name: 'KAVITHA SRINIVAS KONKATA',
+      position: 'CEO OF VALUE LIFE',
       description: 'An experienced leader driving innovation and growth in the MLM industry with a focus on sustainable business practices.'
     },
     {
@@ -107,11 +107,11 @@ const LandingPage: React.FC = () => {
   ];
 
   const products = [
-    { image: '/images/IMG-20250425-WA0038.jpg', name: 'PH Alkaline Water Filter', description: 'Advanced water purification system for healthier living' },
-    { image: '/images/IMG-20250425-WA0039.jpg', name: 'Bio Magnetic Mattress', description: 'Revolutionary sleep technology for better health' },
-    { image: '/images/IMG-20250425-WA0040.jpg', name: 'Health Supplements', description: 'Premium quality supplements for overall wellness' },
-    { image: '/images/IMG-20250425-WA0041.jpg', name: 'Wellness Products', description: 'Innovative solutions for a healthier lifestyle' },
-    { image: '/images/IMG-20250425-WA0042.jpg', name: 'Natural Care', description: 'Organic and natural personal care products' },
+    { image: '/images/img1.jpg', name: 'PH Alkaline Water Filter', description: 'Advanced water purification system for healthier living' },
+    { image: '/images/img2.jpg', name: 'Bio Magnetic Mattress', description: 'Revolutionary sleep technology for better health' },
+    { image: '/images/img3.jpg', name: 'Health Supplements', description: 'Premium quality supplements for overall wellness' },
+    { image: '/images/img4.jpg', name: 'Wellness Products', description: 'Innovative solutions for a healthier lifestyle' },
+    { image: '/images/img5.jpg', name: 'Natural Care', description: 'Organic and natural personal care products' },
     { image: '/images/IMG-20250425-WA0043.jpg', name: 'Lifestyle Products', description: 'Enhanced living through innovative products' },
     { image: '/images/IMG-20250425-WA0044.jpg', name: 'Home Essentials', description: 'Quality products for your daily needs' },
     { image: '/images/IMG-20250425-WA0045.jpg', name: 'Premium Collection', description: 'Exclusive range of premium products' },
@@ -339,16 +339,16 @@ const LandingPage: React.FC = () => {
                 data-aos-delay={index * 200}
                 data-aos-duration="1000"
               >
-                <div className="aspect-w-3 aspect-h-4 relative overflow-hidden">
+                <div className="aspect-w-3 aspect-h-2 relative overflow-hidden">
                   <img
                     src={member.image}
                     alt={member.name}
                     className="w-full h-full object-cover object-center transform group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-blue-900/90 via-blue-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    <div className="absolute bottom-0 p-6 text-white transform translate-y-6 group-hover:translate-y-0 transition-transform duration-500">
+                    {/* <div className="absolute bottom-0 p-6 text-white transform translate-y-6 group-hover:translate-y-0 transition-transform duration-500">
                       <p className="text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">{member.description}</p>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
                 <div className="p-6 bg-white transform group-hover:bg-gradient-to-r from-blue-50 to-white transition-colors duration-500">

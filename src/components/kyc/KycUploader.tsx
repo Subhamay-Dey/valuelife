@@ -13,7 +13,7 @@ interface KycUploaderProps {
   existingDocument?: string; // Can be a URL or base64 data
   existingDocumentName?: string; // Document filename
   rejectionReason?: string;
-  onUpload: (file: File) => void;
+  onUpload?: (file: File) => void;
   showHistory?: boolean;
 }
 
