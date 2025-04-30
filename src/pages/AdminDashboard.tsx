@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Users, Package, FileCheck, LogOut, DollarSign, Wallet, RefreshCw } from 'lucide-react';
+import { Users, Package, FileCheck, LogOut, DollarSign, Wallet, RefreshCw, IndianRupee } from 'lucide-react';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
 import AdminLayout from '../components/layout/AdminLayout';
@@ -170,11 +170,11 @@ const AdminDashboard: React.FC = () => {
         <Card>
           <div className="flex items-center">
             <div className="p-3 bg-secondary-100 rounded-full text-secondary-600 mr-4">
-              <DollarSign className="h-5 w-5" />
+              <IndianRupee className="h-5 w-5" />
             </div>
             <div>
               <p className="text-sm text-neutral-500">Total Earnings</p>
-              <h3 className="text-xl font-bold text-neutral-900">${stats.totalEarnings.toFixed(2)}</h3>
+              <h3 className="text-xl font-bold text-neutral-900">₹{stats.totalEarnings.toFixed(2)}</h3>
             </div>
           </div>
         </Card>
@@ -198,7 +198,7 @@ const AdminDashboard: React.FC = () => {
             </div>
             <div>
               <p className="text-sm text-neutral-500">Pending Withdrawals</p>
-              <h3 className="text-xl font-bold text-neutral-900">${stats.pendingWithdrawals.toFixed(2)}</h3>
+              <h3 className="text-xl font-bold text-neutral-900">₹{stats.pendingWithdrawals.toFixed(2)}</h3>
             </div>
           </div>
         </Card>
