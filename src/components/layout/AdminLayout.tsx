@@ -8,7 +8,7 @@ interface AdminLayoutProps {
 
 const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
   const location = useLocation();
-  
+
   const navigationItems = [
     { path: '/admin/dashboard', label: 'Dashboard', icon: <LayoutDashboard className="h-5 w-5" /> },
     { path: '/admin/kyc', label: 'KYC Approvals', icon: <FileCheck className="h-5 w-5" /> },
@@ -19,7 +19,7 @@ const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
   ];
 
   return (
-    <div className="min-h-screen bg-neutral-50">
+    <div className="min-h-screen bg-black">
       {/* Admin Header */}
       <header className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -35,7 +35,7 @@ const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
           </div>
         </div>
       </header>
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row">
           {/* Admin Sidebar */}
@@ -59,7 +59,7 @@ const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
               ))}
             </nav>
           </div>
-          
+
           {/* Main Content */}
           <main className="flex-1 py-6 md:px-6">
             {children}

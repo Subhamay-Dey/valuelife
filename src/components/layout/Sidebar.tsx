@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { 
-  LayoutDashboard, 
-  Users, 
-  Wallet, 
-  FileCheck, 
-  User, 
+import {
+  LayoutDashboard,
+  Users,
+  Wallet,
+  FileCheck,
+  User,
   Share2,
   Settings,
   HelpCircle,
@@ -25,12 +25,12 @@ interface NavItem {
 const Sidebar: React.FC = () => {
   const location = useLocation();
   const [user, setUser] = useState<UserType | null>(null);
-  
+
   useEffect(() => {
     const currentUser = getCurrentUser();
     setUser(currentUser);
   }, []);
-  
+
   const navItems: NavItem[] = [
     {
       name: 'Dashboard',
@@ -88,13 +88,13 @@ const Sidebar: React.FC = () => {
   const isActive = (path: string) => {
     return location.pathname === path;
   };
-  
+
   const isKycApproved = () => {
     return user?.kycStatus === 'approved';
   };
 
   return (
-    <div className="py-6 h-full flex flex-col">
+    <div className="py-6 px-4 h-screen fixed flex flex-col bg-gradient-to-b from-[#2eb6ff] to-[#ff8214]">
       <nav className="flex-1 space-y-1">
         {navItems.map((item) => (
           <Link
@@ -103,10 +103,9 @@ const Sidebar: React.FC = () => {
             className={`
               flex items-center px-4 py-2.5 text-sm font-medium rounded-md
               transition-colors duration-200
-              ${
-                isActive(item.path)
-                  ? 'bg-primary-50 text-primary-600'
-                  : 'text-neutral-700 hover:bg-neutral-100 hover:text-primary-600'
+              ${isActive(item.path)
+                ? 'bg-white/30 text-white'
+                : 'text-white hover:bg-white/30'
               }
               ${item.requiresKyc && !isKycApproved() ? 'opacity-70' : ''}
             `}
@@ -115,7 +114,7 @@ const Sidebar: React.FC = () => {
             {item.name}
             {item.requiresKyc && !isKycApproved() && (
               <span className="ml-auto">
-                <Lock className="h-3.5 w-3.5 text-neutral-400" />
+                <Lock className="h-3.5 w-3.5 text-white" />
               </span>
             )}
           </Link>
@@ -130,10 +129,9 @@ const Sidebar: React.FC = () => {
             className={`
               flex items-center px-4 py-2.5 text-sm font-medium rounded-md
               transition-colors duration-200
-              ${
-                isActive(item.path)
-                  ? 'bg-primary-50 text-primary-600'
-                  : 'text-neutral-700 hover:bg-neutral-100 hover:text-primary-600'
+              ${isActive(item.path)
+                ? 'bg-white/30 text-white'
+                : 'text-white hover:bg-white/30'
               }
               ${item.requiresKyc && !isKycApproved() ? 'opacity-70' : ''}
             `}
@@ -149,7 +147,7 @@ const Sidebar: React.FC = () => {
         ))}
       </div>
 
-      <div className="mt-6 px-4 py-4 bg-primary-50 rounded-lg">
+      <div className="mt-6 mb-14 px-4 py-4 bg-primary-50 rounded-lg">
         <h3 className="text-sm font-medium text-primary-800">Referral Status</h3>
         <p className="mt-1 text-sm text-primary-600">3 Direct Referrals</p>
         <div className="mt-2 relative pt-1">
