@@ -54,15 +54,15 @@ app.get('/api/db', (req, res) => {
 app.get('/api/db/:section', (req, res) => {
   const { section } = req.params;
   const data = readDatabase();
-  
+
   if (!data) {
     return res.status(500).json({ error: 'Failed to read database' });
   }
-  
+
   if (data[section] === undefined) {
     return res.status(404).json({ error: `Section "${section}" not found` });
   }
-  
+
   res.json(data[section]);
 });
 
@@ -71,17 +71,17 @@ app.post('/api/db/:section', (req, res) => {
   const { section } = req.params;
   const newData = req.body;
   const data = readDatabase();
-  
+
   if (!data) {
     return res.status(500).json({ error: 'Failed to read database' });
   }
-  
+
   if (data[section] === undefined) {
     return res.status(404).json({ error: `Section "${section}" not found` });
   }
-  
+
   data[section] = newData;
-  
+
   const success = writeDatabase(data);
   if (success) {
     res.json({ success: true, message: `Updated section "${section}"` });
@@ -95,21 +95,21 @@ app.post('/api/db/:section/add', (req, res) => {
   const { section } = req.params;
   const newItem = req.body;
   const data = readDatabase();
-  
+
   if (!data) {
     return res.status(500).json({ error: 'Failed to read database' });
   }
-  
+
   if (data[section] === undefined) {
     return res.status(404).json({ error: `Section "${section}" not found` });
   }
-  
+
   if (!Array.isArray(data[section])) {
     return res.status(400).json({ error: `Section "${section}" is not an array` });
   }
-  
+
   data[section].push(newItem);
-  
+
   const success = writeDatabase(data);
   if (success) {
     res.json({ success: true, message: `Added item to "${section}"` });
@@ -122,13 +122,13 @@ app.post('/api/db/:section/add', (req, res) => {
 app.post('/api/db/currentUser/update', (req, res) => {
   const userData = req.body;
   const data = readDatabase();
-  
+
   if (!data) {
     return res.status(500).json({ error: 'Failed to read database' });
   }
-  
+
   data.currentUser = userData;
-  
+
   // Also update the user in the users array if it exists
   if (userData && userData.id) {
     const userIndex = data.users.findIndex(u => u.id === userData.id);
@@ -136,7 +136,7 @@ app.post('/api/db/currentUser/update', (req, res) => {
       data.users[userIndex] = userData;
     }
   }
-  
+
   const success = writeDatabase(data);
   if (success) {
     res.json({ success: true, message: 'Updated current user' });
